@@ -8,4 +8,4 @@ $thor = new Avenger('Thor', 'Male', 'For Asgard');
 
 $thor->sayOneliner();
 
-print_r('<pr>'. $thor. '</pre>');
+print_r('<pre>'. $thor. '</pre>');
