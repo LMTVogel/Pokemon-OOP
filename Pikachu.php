@@ -16,4 +16,9 @@ class Pikachu extends \Pokemon\Pokemon
 
         parent::__construct($name, $energyType, $hitpoints, $attacks, $weakness, $resistance);
     }
+
+    public function getPokemonName()
+    {
+        return $this->name;
+    }
 }
