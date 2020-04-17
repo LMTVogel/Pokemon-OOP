@@ -1,7 +1,7 @@
 <?php
-
+/* Deze file kun je nu aanroepen doormiddel van de namespace */
 namespace Pokemon;
-
+/* De code zorgt ervoor dat je niet elke file hoeft te requireren */
 spl_autoload_register(function ($class_name) {
     include $class_name . '.php';
 });
@@ -17,7 +17,7 @@ class Pokemon
     public $attacks;
     public $weakness;
     public $resistance;
-
+    /* Constructor wordt uitgevoerd als er een nieuwe Pokemon wordt aangemaakt */
     public function __construct ($name, $energyType, $hitpoints, $attacks, $weakness, $resistance)
     {
         $this->name = $name;
@@ -27,10 +27,10 @@ class Pokemon
         $this->attacks = $attacks;
         $this->weakness = $weakness;
         $this->resistance = $resistance;
-
+        /* Er komt elke keer een 1 bij als de constructor is uitgevoerd */
         self::$amountOfPokemon++;
     }
-
+    /* Function gemaakt om de Pokemons elkaar aan te laten vallen */
     public function battleTurn($target, $attacks)
     {
         $energyType = $this->getEnergyType()->getName();
@@ -56,7 +56,7 @@ class Pokemon
 
         $this->damageDone($damage, $target);
     }
-
+    /* Deze function laat zien hoeveel health de Pokemon nog over heeft of hij laat zien dat hij dood is */
     public function damageDone($damage, $target)
     {
         $target->health -= $damage;
@@ -68,42 +68,42 @@ class Pokemon
             echo $target->getPokemonName() . " heeft nog " . $target->getHealth() . " hp over!<br>";
         }
     }
-
+    /* Pakt de variabele amountOfPokemon om te kijken hoe vaak de constructor is gebruikt */
     static function getPopulation()
     {
         return self::$amountOfPokemon;
     }
-
+    /* Pakt de Pokemon naam */
     public function getPokemonName()
     {
         return $this->name;
     }
-
+    /* Pakt de energy type van de Pokemon */
     public function getEnergyType()
     {
         return $this->energyType;
     }
-
+    /* Pakt de hitpoints van de Pokemon */
     public function getHitpoints()
     {
         return $this->hitpoints;
     }
-
+    /* Pakt de attacks van de Pokemon */
     public function getAttack()
     {
         return $this->attacks;
     }
-
+    /* Pakt de weakness van de Pokemon */
     public function getWeakness()
     {
         return $this->weakness;
     }
-
+    /* Pakt de resistance van de Pokemon */
     public function getResistance()
     {
         return $this->resistance;
     }
-
+    /* Pakt de health van de Pokemon */
     public function getHealth()
     {
         return $this->health;
