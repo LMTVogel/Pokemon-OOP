@@ -26,7 +26,6 @@ class Pokemon
      * @param mixed $attacks
      * @param mixed $weakness
      * @param mixed $resistance
-     * @param int $amountOfPokemon
     */
     
     public function __construct ($name, $energyType, $hitpoints, $attacks, $weakness, $resistance)
@@ -95,10 +94,8 @@ class Pokemon
             echo $target->getPokemonName() . " heeft nog " . $target->getHealth() . " hp over!<br>";
         }
     }
-    /**
-     * Pakt de populatie van hoeveel Pokemons er leven op het moment van uitvoeren.
-     * @param int $amountOfPokemon
-     */
+    
+    // Pakt de populatie van hoeveel Pokemons er leven op het moment van uitvoeren.
     static function getPopulation()
     {
         return self::$amountOfPokemon;
