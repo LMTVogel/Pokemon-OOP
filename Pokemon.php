@@ -95,42 +95,58 @@ class Pokemon
         }
     }
     
-    // Pakt de populatie van hoeveel Pokemons er leven op het moment van uitvoeren.
+    /**
+     * @return int $amountOfPokemon
+     */
     static function getPopulation()
     {
         return self::$amountOfPokemon;
     }
-    
+    /**
+     * @return string $name
+     */
     public function getPokemonName()
     {
         return $this->name;
     }
-    
+    /**
+     * @return string $energyType
+     */
     public function getEnergyType()
     {
         return $this->energyType;
     }
-    
+    /**
+     * @return int $hitpoints
+     */
     public function getHitpoints()
     {
         return $this->hitpoints;
     }
-    
+    /**
+     * @return mixed $attacks
+     */
     public function getAttack()
     {
         return $this->attacks;
     }
-    
+    /**
+     * @return mixed $weakness
+     */
     public function getWeakness()
     {
         return $this->weakness;
     }
-    
+    /**
+     * @return mixed $resistance
+     */
     public function getResistance()
     {
         return $this->resistance;
     }
-    
+    /**
+     * @return int $health
+     */
     public function getHealth()
     {
         return $this->health;

@@ -2,6 +2,9 @@
 
 class Pikachu extends \Pokemon\Pokemon
 {
+    /** Constructor wordt uitgevoerd als er een nieuwe Pikachu class word aangemaakt.
+     * @param string $name
+     */
     public function __construct($name)
     {
         $energyType = new EnergyType('Lightning');
@@ -13,10 +16,20 @@ class Pikachu extends \Pokemon\Pokemon
 
         $weakness = new Weakness('Fire', 1.5);
         $resistance = new Resistance('Fighting', 20);
-
+        /** 
+         * Constructor die gebruikt wordt om een Pokemon object aan te maken.
+         * @param string $name
+         * @param string $energyType
+         * @param int $hitpoints
+         * @param mixed $attacks
+         * @param mixed $weakness
+         * @param mixed $resistance
+        */
         parent::__construct($name, $energyType, $hitpoints, $attacks, $weakness, $resistance);
     }
-
+    /**
+     * @return string $name
+     */
     public function getPokemonName()
     {
         return $this->name;
