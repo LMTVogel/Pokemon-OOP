@@ -59,17 +59,17 @@ class Pokemon
         // Als de weakness overeenkomt met de energytype van de aanvallende Pokemon dan word de multiplier gebruikt.
         if ($weaknessEnergyType == $energyType) {
             $damage = $attacks->getAttackDamage() * $multiplierEnergyType;
-            echo $this->name . " valt aan met " .  $attacks->getAttackName() . "! It's super effective! (" . $damage . " damage)<br>";
+            echo $this->getPokemonName() . " valt aan met " .  $attacks->getAttackName() . "! It's super effective! (" . $damage . " damage)<br>";
         } 
         // Als de resistance overeenkomt met de energytupe dan word de resistance afgetrokken van de attackdamage.
         elseif ($resistanceEnergyType == $energyType) {
             $damage = $attacks->getAttackDamage() - $resistance;
-            echo $this->name . " valt aan met " .  $attacks->getAttackName() . "! It's not very effective (" . $damage . " damage)<br>";
+            echo $this->getPokemonName() . " valt aan met " .  $attacks->getAttackName() . "! It's not very effective (" . $damage . " damage)<br>";
         } 
         // Laat de attack zien met de damage die wordt aangedaan.
         else {
             $damage = $attacks->getAttackDamage();
-            echo $this->name . " valt aan met " .  $attacks->getAttackName() . " (" . $damage . " damage)<br>";
+            echo $this->getPokemonName() . " valt aan met " .  $attacks->getAttackName() . " (" . $damage . " damage)<br>";
         }
         
         $this->damageDone($damage, $target);

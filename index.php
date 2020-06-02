@@ -1,8 +1,6 @@
 <?php
 
 require 'Pokemon.php';
-require 'Pikachu.php';
-require 'Charmeleon.php';
 /* Gebruikt de class Pokemon in de namespace Pokemon */
 use Pokemon\Pokemon;
 /* Maakt nieuwe objecten aan */
