@@ -2,8 +2,8 @@
 
 class Attack
 {
-    public $name;
-    public $damage;
+    private $name;
+    private $damage;
     /** Constuctor wordt uitgevoerd als er een nieuwe attack wordt aangemaakt.
      * @param string $name
      * @param int $damage

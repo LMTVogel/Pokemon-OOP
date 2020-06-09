@@ -2,7 +2,7 @@
 
 class EnergyType 
 {
-    public $name;
+    private $name;
     /** Word uitgevoerd voor elke nieuwe EnergyType
      * @param string $name
      */

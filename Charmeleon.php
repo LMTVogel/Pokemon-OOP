@@ -27,11 +27,4 @@ class Charmeleon extends \Pokemon\Pokemon
         */
         parent::__construct($name, $energyType, $hitpoints, $attacks, $weakness, $resistance);
     }
-    /**
-     * @return string $name
-     */
-    public function getFunctionName()
-    {
-        return $this->name;
-    }
 }

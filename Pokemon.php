@@ -11,12 +11,12 @@ spl_autoload_register(function ($class_name) {
 class Pokemon
 {
     static $amountOfPokemon;
-    public $name;
-    public $energyType;
-    public $hitpoints;
+    private $name;
+    private $energyType;
+    private $hitpoints;
     public $attacks;
-    public $weakness;
-    public $resistance;
+    private $weakness;
+    private $resistance;
 
     /** 
      * Constructor die gebruikt wordt om een Pokemon object aan te maken
@@ -28,7 +28,7 @@ class Pokemon
      * @param mixed $resistance
     */
     
-    public function __construct ($name, $energyType, $hitpoints, $attacks, $weakness, $resistance)
+    protected function __construct ($name, $energyType, $hitpoints, $attacks, $weakness, $resistance)
     {
         $this->name = $name;
         $this->energyType = $energyType;
@@ -54,6 +54,7 @@ class Pokemon
 
         $resistanceEnergyType = $target->getResistance()->getEnergyType();
         $resistance = $target->getResistance()->getEnergyTypeValue();
+        
         // Print de naam en de HP en hoeveel hitpoints de Pokemon nog heeft.
         echo "<br><strong>" . $target->getPokemonName() .  " HP: " . $target->getHealth() . "/" .  $target->getHitpoints() . " <br><br>";
         // Als de weakness overeenkomt met de energytype van de aanvallende Pokemon dan word de multiplier gebruikt.
@@ -98,56 +99,56 @@ class Pokemon
     /**
      * @return int $amountOfPokemon
      */
-    static function getPopulation()
+    public static function getPopulation()
     {
         return self::$amountOfPokemon;
     }
     /**
      * @return string $name
      */
-    public function getPokemonName()
+    private function getPokemonName()
     {
         return $this->name;
     }
     /**
      * @return string $energyType
      */
-    public function getEnergyType()
+    private function getEnergyType()
     {
         return $this->energyType;
     }
     /**
      * @return int $hitpoints
      */
-    public function getHitpoints()
+    private function getHitpoints()
     {
         return $this->hitpoints;
     }
     /**
      * @return mixed $attacks
      */
-    public function getAttack()
+    private function getAttack()
     {
         return $this->attacks;
     }
     /**
      * @return mixed $weakness
      */
-    public function getWeakness()
+    private function getWeakness()
     {
         return $this->weakness;
     }
     /**
      * @return mixed $resistance
      */
-    public function getResistance()
+    private function getResistance()
     {
         return $this->resistance;
     }
     /**
      * @return int $health
      */
-    public function getHealth()
+    private function getHealth()
     {
         return $this->health;
     }

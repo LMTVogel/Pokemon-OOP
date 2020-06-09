@@ -2,8 +2,8 @@
 
 class Weakness
 {
-    public $name;
-    public $multiplier;
+    private $name;
+    private $multiplier;
     /** Constructor wordt uitgevoerd als er een nieuw object wordt aangemaakt
      * @param string $name
      * @param int $multiplier

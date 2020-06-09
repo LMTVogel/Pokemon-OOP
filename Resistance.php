@@ -2,8 +2,8 @@
 
 class Resistance
 {
-    public $name;
-    public $value;
+    private $name;
+    private $value;
     /** Constructor wordt uitgevoerd als er een nieuw object wordt aangemaakt
      * @param string $name
      * @param int $value
